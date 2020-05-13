@@ -9,7 +9,7 @@ module.exports = {
       'prettier/@typescript-eslint',
     ],
     ignorePatterns: [
-        'docs/',
+        'public/',
         'node_modules/',
     ],
     overrides: [
