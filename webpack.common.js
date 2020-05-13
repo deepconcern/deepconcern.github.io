@@ -31,7 +31,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             inject: 'body',
-            template: resolve(__dirname, 'index.html'),
+            template: resolve(__dirname, 'templates', 'index.html'),
         }),
     ],
     resolve: {
