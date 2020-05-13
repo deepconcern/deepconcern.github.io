@@ -38,6 +38,6 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.css', '.sass'],
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.css', '.sass', '.json'],
     },
 };

@@ -1,5 +1,5 @@
 export type Repository = {
-    description: string,
+    description: string | null,
     name: string,
     topics: string[],
     url: string,

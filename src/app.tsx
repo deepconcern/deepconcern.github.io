@@ -1,15 +1,17 @@
 import React, { FC } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
+import { repositories } from "../repository-data.json";
+
 import { AppsRoute } from './apps-route';
 import { GamesRoute } from './games-route';
 import { HomeRoute } from './home-route';
 import { LibrariesRoute } from './libraries-route';
-import { RepositoriesProvider } from './repositories';
+import { RepositoriesContext } from './repositories-context';
 
 export const App: FC = () => {
     return (
-        <RepositoriesProvider>
+        <RepositoriesContext.Provider value={repositories}>
             <HashRouter>
                     <Switch>
                         <Route exact path="/">
@@ -26,6 +28,6 @@ export const App: FC = () => {
                         </Route>
                     </Switch>
             </HashRouter>
-                </RepositoriesProvider>
+                </RepositoriesContext.Provider>
     );
 };

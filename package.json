@@ -10,6 +10,7 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "deploy": "./scripts/deploy.sh",
+    "fetch-repository-data": "./scripts/fetch-repository-data.js",
     "format": "./scripts/format.sh",
     "lint": "./scripts/lint.sh",
     "start": "./scripts/start.sh"
