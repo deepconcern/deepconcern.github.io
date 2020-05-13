@@ -1,8 +1,10 @@
 const CopyPlugin = require('copy-webpack-plugin');
-require('dotenv').config();
+const { config } = require('dotenv');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { resolve } = require('path');
+const { join, resolve } = require('path');
 const { DefinePlugin } = require('webpack');
+
+config();
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -19,17 +21,18 @@ module.exports = {
     output: {
         chunkFilename: '[name].bundle.js',
         filename: '[name].bundle.js',
-        path: resolve(__dirname, 'docs'),
+        path: resolve(__dirname, 'public'),
     },
     plugins: [
         new CopyPlugin([
-            { from: 'assets', to: 'assets' }
+            { from: 'assets', to: '.' }
         ]),
         new DefinePlugin({
             'process.env.GITHUB_ACCESS_TOKEN': JSON.stringify(process.env.GITHUB_ACCESS_TOKEN),
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
         new HTMLWebpackPlugin({
+            filename: join('..', 'index.html'),
             inject: 'body',
             template: resolve(__dirname, 'templates', 'index.html'),
         }),
