@@ -4,7 +4,7 @@ const commonConfiguration = require('./webpack.common');
 
 module.exports = merge(commonConfiguration, {
     devServer: {
-        contentBase: './dist/',
+        contentBase: './public/',
         
     },
     devtool: 'inline-source-map',

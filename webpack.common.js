@@ -32,7 +32,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
         new HTMLWebpackPlugin({
-            filename: join('..', 'index.html'),
+            filename: process.env.NODE_ENV === 'production' ? join('..', 'index.html') : 'index.html',
             inject: 'body',
             template: resolve(__dirname, 'templates', 'index.html'),
         }),
