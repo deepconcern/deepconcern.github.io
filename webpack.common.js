@@ -19,7 +19,7 @@ module.exports = {
     output: {
         chunkFilename: '[name].bundle.js',
         filename: '[name].bundle.js',
-        path: resolve(__dirname, 'dist'),
+        path: resolve(__dirname, 'docs'),
     },
     plugins: [
         new CopyPlugin([
