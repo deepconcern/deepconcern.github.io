@@ -3,7 +3,7 @@
     {
       "description": "A collection of data structures written in TypeScript.",
       "name": "data-structures",
-      "url": "https://api.github.com/repos/deepconcern/data-structures",
+      "url": "https://github.com/deepconcern/data-structures",
       "topics": [
         "typescript",
         "library"
@@ -12,13 +12,13 @@
     {
       "description": null,
       "name": "deepconcern.github.io",
-      "url": "https://api.github.com/repos/deepconcern/deepconcern.github.io",
+      "url": "https://github.com/deepconcern/deepconcern.github.io",
       "topics": []
     },
     {
       "description": "A game discovery website",
       "name": "game-discovery",
-      "url": "https://api.github.com/repos/deepconcern/game-discovery",
+      "url": "https://github.com/deepconcern/game-discovery",
       "topics": [
         "application",
         "typescript",
@@ -30,49 +30,49 @@
     {
       "description": "An Android app that fetches movies from themoviedb.org and displays their information.",
       "name": "popularmovies",
-      "url": "https://api.github.com/repos/deepconcern/popularmovies",
+      "url": "https://github.com/deepconcern/popularmovies",
       "topics": []
     },
     {
       "description": null,
       "name": "sudoku-python",
-      "url": "https://api.github.com/repos/deepconcern/sudoku-python",
+      "url": "https://github.com/deepconcern/sudoku-python",
       "topics": []
     },
     {
       "description": "A weather app that fetches information from openweathermap.org and displays it.",
       "name": "sunshine",
-      "url": "https://api.github.com/repos/deepconcern/sunshine",
+      "url": "https://github.com/deepconcern/sunshine",
       "topics": []
     },
     {
       "description": null,
       "name": "the-clone-wars",
-      "url": "https://api.github.com/repos/deepconcern/the-clone-wars",
+      "url": "https://github.com/deepconcern/the-clone-wars",
       "topics": []
     },
     {
       "description": "A boilerplate for creating TypeScript and React apps. ",
       "name": "ts-react-boilerplate",
-      "url": "https://api.github.com/repos/deepconcern/ts-react-boilerplate",
+      "url": "https://github.com/deepconcern/ts-react-boilerplate",
       "topics": []
     },
     {
       "description": "A portfolio containing applications I made as a part of my Udacity Nanodegree.",
       "name": "udacityportfolio",
-      "url": "https://api.github.com/repos/deepconcern/udacityportfolio",
+      "url": "https://github.com/deepconcern/udacityportfolio",
       "topics": []
     },
     {
       "description": "A test project that fetches weather reports based on location.",
       "name": "weatherproject",
-      "url": "https://api.github.com/repos/deepconcern/weatherproject",
+      "url": "https://github.com/deepconcern/weatherproject",
       "topics": []
     },
     {
       "description": null,
       "name": "westcoast",
-      "url": "https://api.github.com/repos/deepconcern/westcoast",
+      "url": "https://github.com/deepconcern/westcoast",
       "topics": []
     }
   ]

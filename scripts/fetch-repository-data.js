@@ -34,7 +34,7 @@ const fetchRepositoryData = async () => {
             return {
                 description: repo.description,
                 name: repo.name,
-                url: repo.url,
+                url: repo.html_url,
                 topics: data.names,
             };
         });
