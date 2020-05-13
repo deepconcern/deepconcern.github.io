@@ -8,10 +8,12 @@ const APP_TOPC = 'application';
 export const AppsRoute: FC = () => {
     return (
         <Screen>
-            <section className="section has-text-centered">
-                    <div className="container content">
+            <section className="section">
+                    <div className="container">
                         <h2 className="title">Apps</h2>
-                        <RepositoryList topicFilter={APP_TOPC}/>
+                        <div className="box content">
+                            <RepositoryList topicFilter={APP_TOPC}/>
+                        </div>
                     </div>
                 </section>
         </Screen>

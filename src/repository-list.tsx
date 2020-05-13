@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 
 import { useRepositories } from './repositories';
 
@@ -17,23 +17,24 @@ export const RepositoryList: FC<Props> = ({ topicFilter }) => {
     } else if (!repositories) {
         return <p>No repositories... yet!</p>;
     } else {
-        const appRepositories = repositories.filter(repository => {
+        const filteredRepositories = repositories.filter(repository => {
             return repository.topics.includes(topicFilter);
         });
 
-        if (appRepositories.length === 0) {
+        if (filteredRepositories.length === 0) {
             return <p>No repositories... yet!</p>;
         } else {
             return (
-                <ul>
-                    {appRepositories.map(repository => {
+                <dl>
+                    {filteredRepositories.map(repository => {
                         return (
-                            <li key={repository.name}>
-                                <a href={repository.url}>{repository.name}</a>
-                            </li>
+                            <Fragment key={repository.name}>
+                                <dt><a href={repository.url}>{repository.name}</a></dt>
+                                <dd>{repository.description}</dd>
+                            </Fragment>
                         );
                     })}
-                </ul>
+                </dl>
             );
         }
     }

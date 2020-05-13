@@ -81,7 +81,7 @@ export const RepositoriesProvider: FC = React.memo(({ children }) => {
             username: GITHUB_USERNAME,
             type: 'owner',
         }).then(response => {
-            const data: { name: string, url: string}[] = response.data;
+            const data: { description: string, name: string, url: string}[] = response.data;
             return Promise.all(data.map(repo => {
                 return octokit.repos.getAllTopics({
                     repo: repo.name,
@@ -90,6 +90,7 @@ export const RepositoriesProvider: FC = React.memo(({ children }) => {
                     const data: { names: string[] } = response.data;
 
                     return {
+                        description: repo.description,
                         name: repo.name,
                         url: repo.url,
                         topics: data.names,
