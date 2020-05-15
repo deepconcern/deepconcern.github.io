@@ -1,79 +1,169 @@
 {
-  "repositories": [
-    {
-      "description": "A collection of data structures written in TypeScript.",
-      "name": "data-structures",
-      "url": "https://github.com/deepconcern/data-structures",
-      "topics": [
-        "typescript",
-        "library"
+  "viewer": {
+    "repositories": {
+      "nodes": [
+        {
+          "description": null,
+          "homepageUrl": null,
+          "name": "westcoast",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/westcoast"
+        },
+        {
+          "description": "An Android app that fetches movies from themoviedb.org and displays their information.",
+          "homepageUrl": null,
+          "name": "popularmovies",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/popularmovies"
+        },
+        {
+          "description": "A weather app that fetches information from openweathermap.org and displays it.",
+          "homepageUrl": null,
+          "name": "sunshine",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/sunshine"
+        },
+        {
+          "description": "A portfolio containing applications I made as a part of my Udacity Nanodegree.",
+          "homepageUrl": null,
+          "name": "udacityportfolio",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/udacityportfolio"
+        },
+        {
+          "description": null,
+          "homepageUrl": null,
+          "name": "sudoku-python",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/sudoku-python"
+        },
+        {
+          "description": "A test project that fetches weather reports based on location.",
+          "homepageUrl": null,
+          "name": "weatherproject",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/weatherproject"
+        },
+        {
+          "description": "A boilerplate for creating TypeScript and React apps. ",
+          "homepageUrl": null,
+          "name": "ts-react-boilerplate",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/ts-react-boilerplate"
+        },
+        {
+          "description": null,
+          "homepageUrl": null,
+          "name": "the-clone-wars",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/the-clone-wars"
+        },
+        {
+          "description": "My personal website.",
+          "homepageUrl": null,
+          "name": "wyattlbarnes-site",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/wyattlbarnes-site"
+        },
+        {
+          "description": "NGINX configurations for wyattlbarnes.me.",
+          "homepageUrl": null,
+          "name": "wyattlbarnes-conf",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/wyattlbarnes-conf"
+        },
+        {
+          "description": "A collection of data structures written in TypeScript.",
+          "homepageUrl": null,
+          "name": "data-structures",
+          "repositoryTopics": {
+            "nodes": [
+              {
+                "topic": {
+                  "id": "MDU6VG9waWN0eXBlc2NyaXB0",
+                  "name": "typescript"
+                }
+              },
+              {
+                "topic": {
+                  "id": "MDU6VG9waWNsaWJyYXJ5",
+                  "name": "library"
+                }
+              }
+            ]
+          },
+          "url": "https://github.com/deepconcern/data-structures"
+        },
+        {
+          "description": "A game discovery website",
+          "homepageUrl": null,
+          "name": "game-discovery",
+          "repositoryTopics": {
+            "nodes": [
+              {
+                "topic": {
+                  "id": "MDU6VG9waWNhcHBsaWNhdGlvbg==",
+                  "name": "application"
+                }
+              },
+              {
+                "topic": {
+                  "id": "MDU6VG9waWN0eXBlc2NyaXB0",
+                  "name": "typescript"
+                }
+              },
+              {
+                "topic": {
+                  "id": "MDU6VG9waWNyZWFjdA==",
+                  "name": "react"
+                }
+              },
+              {
+                "topic": {
+                  "id": "MDU6VG9waWNncmFwaHFs",
+                  "name": "graphql"
+                }
+              },
+              {
+                "topic": {
+                  "id": "MDU6VG9waWNhcG9sbG8=",
+                  "name": "apollo"
+                }
+              }
+            ]
+          },
+          "url": "https://github.com/deepconcern/game-discovery"
+        },
+        {
+          "description": "My personal website",
+          "homepageUrl": "https://deepconcern.github.io",
+          "name": "deepconcern.github.io",
+          "repositoryTopics": {
+            "nodes": []
+          },
+          "url": "https://github.com/deepconcern/deepconcern.github.io"
+        }
       ]
-    },
-    {
-      "description": null,
-      "name": "deepconcern.github.io",
-      "url": "https://github.com/deepconcern/deepconcern.github.io",
-      "topics": []
-    },
-    {
-      "description": "A game discovery website",
-      "name": "game-discovery",
-      "url": "https://github.com/deepconcern/game-discovery",
-      "topics": [
-        "application",
-        "typescript",
-        "react",
-        "graphql",
-        "apollo"
-      ]
-    },
-    {
-      "description": "An Android app that fetches movies from themoviedb.org and displays their information.",
-      "name": "popularmovies",
-      "url": "https://github.com/deepconcern/popularmovies",
-      "topics": []
-    },
-    {
-      "description": null,
-      "name": "sudoku-python",
-      "url": "https://github.com/deepconcern/sudoku-python",
-      "topics": []
-    },
-    {
-      "description": "A weather app that fetches information from openweathermap.org and displays it.",
-      "name": "sunshine",
-      "url": "https://github.com/deepconcern/sunshine",
-      "topics": []
-    },
-    {
-      "description": null,
-      "name": "the-clone-wars",
-      "url": "https://github.com/deepconcern/the-clone-wars",
-      "topics": []
-    },
-    {
-      "description": "A boilerplate for creating TypeScript and React apps. ",
-      "name": "ts-react-boilerplate",
-      "url": "https://github.com/deepconcern/ts-react-boilerplate",
-      "topics": []
-    },
-    {
-      "description": "A portfolio containing applications I made as a part of my Udacity Nanodegree.",
-      "name": "udacityportfolio",
-      "url": "https://github.com/deepconcern/udacityportfolio",
-      "topics": []
-    },
-    {
-      "description": "A test project that fetches weather reports based on location.",
-      "name": "weatherproject",
-      "url": "https://github.com/deepconcern/weatherproject",
-      "topics": []
-    },
-    {
-      "description": null,
-      "name": "westcoast",
-      "url": "https://github.com/deepconcern/westcoast",
-      "topics": []
     }
-  ]
+  }
 }

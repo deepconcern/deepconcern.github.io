@@ -10,7 +10,9 @@ export const RepositoryList: FC<Props> = ({ topicFilter }) => {
     const repositories = useContext(RepositoriesContext);
 
     const filteredRepositories = repositories.filter(repository => {
-        return repository.topics.includes(topicFilter);
+        return repository.repositoryTopics.nodes.find(topic => {
+            return topic.topic.name === topicFilter;
+        });
     });
 
     if (filteredRepositories.length === 0) {
@@ -21,7 +23,10 @@ export const RepositoryList: FC<Props> = ({ topicFilter }) => {
                 {filteredRepositories.map(repository => {
                     return (
                         <Fragment key={repository.name}>
-                            <dt><a href={repository.url}>{repository.name}</a></dt>
+                            <dt>
+                                <a href={repository.url}>{repository.name}</a>
+                                {repository.homepageUrl ? <a href={repository.homepageUrl}>(Website)</a> : null}
+                            </dt>
                             <dd>{repository.description}</dd>
                         </Fragment>
                     );

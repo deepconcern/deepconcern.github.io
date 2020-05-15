@@ -3,7 +3,9 @@
 const { config } = require('dotenv');
 const { writeFileSync } = require('fs');
 const { resolve } = require('path');
-const { Octokit } = require('@octokit/rest');
+const { createTokenAuth } = require('@octokit/auth-token');
+const { graphql } = require('@octokit/graphql');
+const { RequestError } = require('@octokit/request-error');
 
 config();
 
@@ -13,44 +15,52 @@ const DATA_FILE = 'repository-data.json';
 const DATA_PATH = resolve(ROOT_DIR, DATA_FILE);
 
 const fetchRepositoryData = async () => {
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_ACCESS_KEY,
-    });
 
-    console.log(`Fetching repositories for user "${GITHUB_USERNAME}"...`);
+    console.log(`Fetching repositories for user "${GITHUB_USERNAME}" using token "${process.env.GITHUB_ACCESS_KEY}"...`);
 
-    const { data } = await octokit.repos.listForUser({
-        username: GITHUB_USERNAME,
-        type: 'owner',
-    });
+    const auth = createTokenAuth(process.env.GITHUB_ACCESS_KEY);
 
-    const repositories = await Promise.all(data.map(repo => {
-        return octokit.repos.getAllTopics({
-            repo: repo.name,
-            owner: GITHUB_USERNAME,
-        }).then(response => {
-            const data = response.data;
-
-            return {
-                description: repo.description,
-                name: repo.name,
-                url: repo.html_url,
-                topics: data.names,
-            };
-        });
-    }));
+    const deepConcernRepositoriesData = await graphql.defaults({
+        owner: GITHUB_USERNAME,
+        request: {
+            hook: auth.hook,
+        },
+    })(`
+        query DeepConcernRepositories {
+            viewer {
+                repositories(affiliations: [OWNER], first: 50) {
+                    nodes {
+                        description
+                        homepageUrl
+                        name
+                        repositoryTopics(first: 50) {
+                            nodes {
+                                topic {
+                                id
+                                name
+                                }
+                            }
+                        }
+                        url
+                    }
+                }
+            }
+        }
+    `);
 
     console.log('Fetching done!');
 
-    const repositoryData = {
-        repositories, 
-    };
-
     console.log(`Writing data to file "${DATA_PATH}"`);
 
-    writeFileSync(DATA_PATH, JSON.stringify(repositoryData, null, 2));
+    writeFileSync(DATA_PATH, JSON.stringify(deepConcernRepositoriesData, null, 2));
 
     console.log('Writing done!');
 };
 
-fetchRepositoryData();
+fetchRepositoryData().catch(reason => {
+    if (reason instanceof RequestError) {
+        console.error(`${reason.name}: ${reason.status}`)
+    } else {
+        console.error(reason);
+    }
+});

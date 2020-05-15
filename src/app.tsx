@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import { repositories } from "../repository-data.json";
+import { viewer } from "../repository-data.json";
 
 import { AppsRoute } from './apps-route';
 import { GamesRoute } from './games-route';
@@ -11,7 +11,7 @@ import { RepositoriesContext } from './repositories-context';
 
 export const App: FC = () => {
     return (
-        <RepositoriesContext.Provider value={repositories}>
+        <RepositoriesContext.Provider value={viewer.repositories.nodes}>
             <HashRouter>
                     <Switch>
                         <Route exact path="/">
